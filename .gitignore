@@ -1,0 +1,4 @@
+*.ini
+*.ide
+*.lock
+*.DS_Store
