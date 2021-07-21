@@ -19,6 +19,8 @@ RECIPENT_PHONE_NUMBER = parser.get('PHONE_NUMBERS', 'RECIPENT_PHONE_NUMBER')
 
 PROXY = parser.get('PROXIES', 'PROXY', fallback=None)
 
+STOCK = "BITCOIN"
+
 today = datetime.today().date()  # '2021-03-29'
 
 
@@ -118,5 +120,5 @@ def send_text(stock, per_change, article_info):
 
 if __name__ == "__main__":
     price_movement = btc_change_24hr()
-    news = get_news("bitcoin")
-    send_text("bitcoin", per_change=price_movement, article_info=news)
+    news = get_news(STOCK)
+    send_text(STOCK, per_change=price_movement, article_info=news)
